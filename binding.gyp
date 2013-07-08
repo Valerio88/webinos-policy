@@ -1,6 +1,7 @@
 {
   'variables': {
     'module_name': 'pm',#Specify the module name here
+    #you may override the variables found in node_module.gypi here or through command line
   },
   'targets': [
     {
@@ -25,6 +26,9 @@
             "src/core/policymanager/ProvisionalAction.cpp",
             "src/core/policymanager/ProvisionalActions.cpp",
             "src/core/policymanager/TriggersSet.cpp",
+	    "src/core/policymanager/IPolicyBaseDescriptor.cpp",
+	    "src/core/policymanager/PolicySetDescriptor.cpp",
+	    "src/core/policymanager/PolicyDescriptor.cpp",
             "src/core/common.cpp",
             "contrib/xmltools/tinyxml.cpp",
             "contrib/xmltools/slre.cpp",
@@ -68,8 +72,8 @@
         'copies': [
           {
             'files': [
-              '<(PRODUCT_DIR)/pm.node',
-              '<(PRODUCT_DIR)/promptMan.node',
+              'build/Release/pm.node',
+              'build/Release/promptMan.node',
             ],
             'destination': 'node_modules/',
           }],
